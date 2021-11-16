@@ -16,7 +16,7 @@ import javax.swing.tree.DefaultTreeModel;
 
 /**
  *
- * @author MyPC1
+ * @author Yuetong Guo
  */
 public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 

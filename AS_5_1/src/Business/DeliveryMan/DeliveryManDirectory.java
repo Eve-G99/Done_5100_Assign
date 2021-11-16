@@ -7,7 +7,7 @@ package Business.DeliveryMan;
 
 /**
  *
- * @author harold
+ * @author Yuetong Guo
  */
 public class DeliveryManDirectory {
     

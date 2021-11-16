@@ -7,7 +7,7 @@ package Business.Restaurant;
 
 /**
  *
- * @author harold
+ * @author Yuetong Guo
  */
 public class RestaurantDirectory {
     

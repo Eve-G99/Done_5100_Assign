@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Business;
 
 
@@ -39,6 +35,7 @@ public class EcoSystem extends Organization{
     }
     
     @Override
+    
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roleList=new ArrayList<Role>();
         roleList.add(new SystemAdminRole());
@@ -46,6 +43,9 @@ public class EcoSystem extends Organization{
     }
     private EcoSystem(){
         super(null);
+        restaurantDirectory = new RestaurantDirectory();
+        customerDirectory = new CustomerDirectory();
+        deliveryManDirectory = new DeliveryManDirectory();
        // networkList=new ArrayList<Network>();
     }
 
@@ -54,4 +54,39 @@ public class EcoSystem extends Organization{
        //
        return false;
     }
+
+    public static EcoSystem getBusiness() {
+        return business;
+    }
+
+    public static void setBusiness(EcoSystem business) {
+        EcoSystem.business = business;
+    }
+
+    public RestaurantDirectory getRestaurantDirectory() {
+        return restaurantDirectory;
+    }
+
+    public void setRestaurantDirectory(RestaurantDirectory restaurantDirectory) {
+        this.restaurantDirectory = restaurantDirectory;
+    }
+
+    public CustomerDirectory getCustomerDirectory() {
+        return customerDirectory;
+    }
+
+    public void setCustomerDirectory(CustomerDirectory customerDirectory) {
+        this.customerDirectory = customerDirectory;
+    }
+
+    public DeliveryManDirectory getDeliveryManDirectory() {
+        return deliveryManDirectory;
+    }
+
+    public void setDeliveryManDirectory(DeliveryManDirectory deliveryManDirectory) {
+        this.deliveryManDirectory = deliveryManDirectory;
+    }
+
+    
+    
 }

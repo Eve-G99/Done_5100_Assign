@@ -11,7 +11,8 @@ import java.nio.file.Paths;
 
 /**
  *
- * @author Yuetong Guo
+ * @author rrheg
+ * @author Lingfeng
  */
 public class DB4OUtil {
 
@@ -43,7 +44,7 @@ public class DB4OUtil {
 
             //Register your top most Class here
             config.common().objectClass(EcoSystem.class).cascadeOnUpdate(true); // Change to the object you want to save
-
+            System.out.print(FILENAME);
             ObjectContainer db = Db4oEmbedded.openFile(config, FILENAME);
             return db;
         } catch (Exception ex) {
@@ -61,7 +62,12 @@ public class DB4OUtil {
     
     public EcoSystem retrieveSystem(){
         ObjectContainer conn = createConnection();
-        ObjectSet<EcoSystem> systems = conn.query(EcoSystem.class); // Change to the object you want to save
+        try{
+        ObjectSet<EcoSystem> systems = conn.query(EcoSystem.class);
+        }
+        catch (com.db4o.events.EventException e){}
+        finally{// Change to the object you want to save
+        ObjectSet<EcoSystem> systems = conn.query(EcoSystem.class);
         EcoSystem system;
         if (systems.size() == 0){
             system = ConfigureASystem.configure();  // If there's no System in the record, create a new one
@@ -70,6 +76,6 @@ public class DB4OUtil {
             system = systems.get(systems.size() - 1);
         }
         conn.close();
-        return system;
+        return system;}
     }
 }

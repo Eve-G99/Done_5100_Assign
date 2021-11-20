@@ -6,7 +6,6 @@ package userinterface;
 
 import Business.EcoSystem;
 import Business.DB4OUtil.DB4OUtil;
-
 import Business.Organization;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
@@ -132,15 +131,27 @@ public class MainJFrame extends javax.swing.JFrame {
         passwordField.setEnabled(true);
         loginJButton.setEnabled(true);
 
-        userNameJTextField.setText("");
-        passwordField.setText("");
+        UserAccount userAccount = system.getUserAccountDirectory().authenticateUser(userName, password);
+        if (userAccount != null){
+                
+                //JPanel mainScreen = new MainScreen(container, userAccount, system);
+                //container.add("MainScreen", mainScreen);
+                //CardLayout layout = (CardLayout) container.getLayout();
+                //layout.next(container);
+                
+                //logoutJButton.setEnabled(true);
+                
+                flag = true;
+                
+            }
+        
 
-        container.removeAll();
-        JPanel blankJP = new JPanel();
-        container.add("blank", blankJP);
-        CardLayout crdLyt = (CardLayout) container.getLayout();
-        crdLyt.next(container);
-        dB4OUtil.storeSystem(system);
+        if (flag == false) {
+            JOptionPane.showMessageDialog(null, "Invalid User Name/ Password.");
+            return;
+        }
+       
+    }                
     }//GEN-LAST:event_logoutJButtonActionPerformed
 
     /**

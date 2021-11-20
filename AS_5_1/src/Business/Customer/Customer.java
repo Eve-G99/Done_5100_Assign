@@ -5,10 +5,44 @@
  */
 package Business.Customer;
 
+import Business.Person;
+import Order.OrderDirectory;
+
 /**
  *
  * @author Yuetong Guo
  */
-public class Customer {
+public class Customer extends Person{
+    
+    private int id;
+    private static int count = 1;
+    private OrderDirectory orders;
+
+    public Customer() {
+        id = count;
+        count++;
+        orders = new OrderDirectory();
+    }
+
+    public OrderDirectory getOrders() {
+        return orders;
+    }
+
+    public void setOrders(OrderDirectory orders) {
+        this.orders = orders;
+    }
+
+
+    
+    public int getId() {
+        return id;
+    }
+
+
+    public static int getCount() {
+        return count;
+    }
+
+    
     
 }

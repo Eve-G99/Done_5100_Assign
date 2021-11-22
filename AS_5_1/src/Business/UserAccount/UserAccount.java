@@ -1,28 +1,25 @@
+
+import Business.Person;
+import Business.Role.Role;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
- */
-package Business.UserAccount;
-
-import Business.Employee.Employee;
-import Business.Role.Role;
-import Business.WorkQueue.WorkQueue;
-
-/**
- *
- * @author Yuetong Guo
  */
 public class UserAccount {
     
     private String username;
     private String password;
-    private Employee employee;
+    private Person person;
     private Role role;
-    private WorkQueue workQueue;
-
     public UserAccount() {
-        workQueue = new WorkQueue();
+        
     }
+    
+    
+    
+    public String getUsername() {
+        return username;
     
     
     
@@ -52,14 +49,6 @@ public class UserAccount {
 
     public void setRole(Role role) {
         this.role = role;
-    }
-
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public WorkQueue getWorkQueue() {
-        return workQueue;
     }
 
     

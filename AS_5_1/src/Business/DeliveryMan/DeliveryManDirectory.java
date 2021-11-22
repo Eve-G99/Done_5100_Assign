@@ -5,10 +5,21 @@
  */
 package Business.DeliveryMan;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
- * @author Yuetong Guo
+ * @author harold
  */
 public class DeliveryManDirectory {
-    
-}
+    Map<Integer,DeliveryMan> delivermen;
+
+    public DeliveryManDirectory() {
+        delivermen = new HashMap<Integer,DeliveryMan>();
+    }
+
+    public Map<Integer, DeliveryMan> getDelivermen() {
+        return delivermen;
+    }
+    //还差半拉

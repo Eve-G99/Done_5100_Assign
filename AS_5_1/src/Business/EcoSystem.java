@@ -1,4 +1,3 @@
-
 package Business;
 
 
@@ -11,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Yuetong Guo
+ * @author MyPC1
  */
 public class EcoSystem extends Organization{
     
@@ -35,7 +34,6 @@ public class EcoSystem extends Organization{
     }
     
     @Override
-    
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roleList=new ArrayList<Role>();
         roleList.add(new SystemAdminRole());
@@ -90,3 +88,4 @@ public class EcoSystem extends Organization{
     
     
 }
+//记得和后面做好衔接

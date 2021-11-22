@@ -5,10 +5,51 @@
  */
 package Business.DeliveryMan;
 
+import Business.Person;
+import Order.Order;
+import Order.OrderDirectory;
+import java.util.Map;
+
 /**
  *
- * @author Yuetong Guo
+ * @author harold
  */
-public class DeliveryMan {
+public class DeliveryMan extends Person {
     
-}
+    private int id;
+    private static int count = 1;
+    private OrderDirectory orders;
+    public DeliveryMan() {
+        orders = new OrderDirectory();
+        id = count;
+        count++;
+    }
+    
+    public int unfinished(){
+        int count = 0;
+        for (Map.Entry<Integer,Order> entry : orders.getOlist().entrySet()){
+            Order or = entry.getValue();
+            if (or.getStatus().equals("Delivering"))
+                count++;
+        }
+        return count;
+    }
+    public OrderDirectory getOrders() {
+        return orders;
+    }
+
+    public void setOrders(OrderDirectory orders) {
+        this.orders = orders;
+    }
+    
+    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+//差半拉没有粘贴

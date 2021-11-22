@@ -6,7 +6,6 @@
 package Business.Customer;
 
 import Business.Person;
-import Order.OrderDirectory;
 
 /**
  *

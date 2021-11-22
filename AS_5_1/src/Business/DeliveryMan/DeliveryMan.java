@@ -52,4 +52,13 @@ public class DeliveryMan extends Person {
         this.id = id;
     }
 
-//差半拉没有粘贴
+    public static int getCount() {
+        return count;
+    }
+
+    public static void setCount(int count) {
+        DeliveryMan.count = count;
+    }
+    
+    
+}

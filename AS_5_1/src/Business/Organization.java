@@ -1,3 +1,4 @@
+
 package Business;
 
 import Business.Employee.EmployeeDirectory;
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Yuetong Guo
+ * @author raunak
  */
 public abstract class Organization {
 

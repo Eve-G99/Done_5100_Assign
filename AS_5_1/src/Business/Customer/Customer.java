@@ -6,10 +6,11 @@
 package Business.Customer;
 
 import Business.Person;
+import Order.OrderDirectory;
 
 /**
  *
- * @author Yuetong Guo
+ * @author harold
  */
 public class Customer extends Person{
     

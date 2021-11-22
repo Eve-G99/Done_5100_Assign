@@ -88,4 +88,3 @@ public class EcoSystem extends Organization{
     
     
 }
-//记得和后面做好衔接

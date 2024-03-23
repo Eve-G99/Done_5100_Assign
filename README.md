@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the final project for the NEU 5100 course at NEU. The project is a health medicine transfer monitor and communication application written in Java.
+This repository contains the final project for the NEU 5100 course at NEU on Spring 2023. The project is a health medicine transfer monitor and communication application written in Java.
 
 ## Features
 
